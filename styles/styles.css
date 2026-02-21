@@ -57,7 +57,7 @@
     --font-size-24: calc((24 / var(--font-size-reference)) * 1rem);
     --font-size-26: calc((26 / var(--font-size-reference)) * 1rem);
     --font-size-30: calc((30 / var(--font-size-reference)) * 1rem);
-    --font-size-50: calc((50 / var(--font-size-reference)) * 1rem);
+    --font-size-40: calc((40 / var(--font-size-reference)) * 1rem);
     --font-size-60: calc((60 / var(--font-size-reference)) * 1rem);
     --font-size-100: calc((100 / var(--font-size-reference)) * 1rem);
 
@@ -76,7 +76,7 @@
     --border-radius-10: 10px;
     --border-radius-round: 50%;
 
-    --border-width-1: 1px;
+    --border-width-2: 2px;
     --border-width-10: 10px;
 
     --opacity-1: 1;
@@ -133,7 +133,7 @@ body {
 
 .wrapper__decoration-right {
     top: -340px;
-    right: -420px;
+    right: -460px;
     transform: rotate(180deg);
 }
 
@@ -219,14 +219,14 @@ body {
     line-height: var(--line-height-100);
     text-align: center;
     text-decoration-line: none;
-    color: var(--color-3);
-    background-color: var(--color-4);
-    border: var(--border-width-1) solid var(--color-4);
-    border-radius: var(--border-radius-10);
+    color: var(--color-2);
+    border: var(--border-width-2) solid var(--color-2);
 }
 
 .header__link:hover {
-    background-color: var(--color-2);
+    color: var(--color-3);
+    background-color: var(--color-4);
+    border-color: var(--color-4);
 }
 
 /* Portrait */
@@ -236,7 +236,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: var(--border-radius-round);
-    border: var(--border-radius-10) solid var(--color-4);
+    border: var(--border-width-10) solid var(--color-2);
 }
 
 /* Price */
@@ -247,8 +247,7 @@ body {
     justify-content: space-between;
     gap: var(--gap-20);
     padding: var(--padding-30) var(--padding-20);
-    background-color: var(--color-2);
-    border-radius: var(--border-radius-10);
+    border: var(--border-width-2) solid var(--color-2);
 }
 
 .price__title {
@@ -258,20 +257,55 @@ body {
     line-height: var(--line-height-120);
     font-size: var(--font-size-24);
     text-align: center;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
-.price__title u {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+.price__title b {
+    font-weight: var(--font-weight-bold);
 }
 
 .price__number {
     font-size: var(--font-size-24);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-100);
-    color: var(--color-3);
+    color: var(--color-2);
     text-align: center;
+}
+
+.calendar {
+    display: flex;
+    border: var(--border-width-2) solid var(--color-3);
+}
+
+/* Email */
+.email {
+    width: 100px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding: var(--padding-20);
+    background-color: var(--color-3);
+    border: var(--border-width-2) solid var(--color-2);
+    border-radius: var(--border-radius-round);
+}
+
+.email:hover {
+    background-color: var(--color-4);
+    border-color: var(--color-4);
+}
+
+.siret {
+    font-size: var(--font-size-16);
+    color: var(--color-2);
+    text-align: center;
+}
+
+.siret__link {
+    color: var(--color-2);
+}
+
+.siret__link:hover {
+    color: var(--color-4);
 }
 
 /* Title */
@@ -334,12 +368,12 @@ body {
 @media (min-width: 480px) {
     .wrapper__decoration-left {
         bottom: -400px;
-        left: -370px;
+        left: -400px;
     }
 
     .wrapper__decoration-right {
         top: -340px;
-        right: -360px;
+        right: -400px;
     }
 }
 
@@ -350,12 +384,12 @@ body {
 
     .wrapper__decoration-left {
         bottom: -410px;
-        left: -370px;
+        left: -400px;
     }
 
     .wrapper__decoration-right {
         top: -380px;
-        right: -280px;
+        right: -300px;
     }
 
     .wrapper__inner {
@@ -407,8 +441,17 @@ body {
         font-size: var(--font-size-30);
     }
 
+    .email {
+        width: 150px;
+        padding: var(--padding-30);
+    }
+
+    .siret {
+        font-size: var(--font-size-18);
+    }
+
     .title {
-        font-size: var(--font-size-50);
+        font-size: var(--font-size-40);
     }
 }
 
@@ -420,7 +463,7 @@ body {
 
     .wrapper__decoration-right {
         top: -380px;
-        right: -150px;
+        right: -200px;
     }
 }
 
@@ -431,6 +474,6 @@ body {
     }
 
     .wrapper__decoration-right {
-        right: -100px;
+        right: -150px;
     }
 }

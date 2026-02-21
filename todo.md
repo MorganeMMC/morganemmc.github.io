@@ -21,7 +21,6 @@
 # Section 4 *
 - Mes Disponibilités
 - Google Calendar
-
 # Section 5
 - Les Témoignages
 - Ruhm Kodiak
